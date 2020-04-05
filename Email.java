@@ -1,4 +1,3 @@
-package Project1;
 import java.util.Scanner;
 public class Email {
 
@@ -43,7 +42,7 @@ public class Email {
 			return "Accounting";
 		}
 		else
-			return " ";
+			return "general";
 	}
 	
 	//Generate a random password
@@ -52,8 +51,8 @@ public class Email {
 	
 		char[] arrPassword = new char[length];
 		
-		for(int i = 0; i < length; i++) {
-			int rand = (int)(Math.random() * passwordSet.length() + 1);
+		for(int i = 0; i < length-1; i++) {
+			int rand = (int)(Math.random() * (passwordSet.length()-1) + 1);
 			arrPassword[i] = passwordSet.charAt(rand);
 		}
 		return new String(arrPassword);
